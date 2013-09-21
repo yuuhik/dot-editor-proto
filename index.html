@@ -8,94 +8,99 @@
     
     <!-- CSS -->
     <link
-       href="/stylesheets/black-base.css"
+       href="./stylesheets/black-base.css"
        rel="stylesheet">    
     <link
-       href="/stylesheets/board2.css"
+       href="./stylesheets/board.css"
        rel="stylesheet">
 
     <!-- jQuery -->
     <script
-       src="/javascripts/jquery-1.9.0.js"
+       src="./javascripts/jquery-1.9.0.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/jquery-ui-1.10.0.custom.min.js"
+       src="./javascripts/jquery-ui-1.10.0.custom.min.js"
        type="text/javascript"></script>
     
+    <!-- init -->
+    <script
+       src="./javascripts/board/board_init.js"
+       type="text/javascript"></script>
+
     <!-- board -->
     <script
-       src="/javascripts/board/board_init.js"
+       src="./javascripts/board/panel.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/board/panel.js"
+       src="./javascripts/board/board.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/board/board.js"
+       src="./javascripts/board/small_board.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/board/editor.js"
+       src="./javascripts/board/editor.js"
        type="text/javascript"></script>
 
     <!-- repl -->
     <script
-       src="/javascripts/board/div_repl.js"
+       src="./javascripts/board/div_repl.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/board/div_repl_output.js"
+       src="./javascripts/board/div_repl_output.js"
        type="text/javascript"></script>
 
     <!-- palette -->
     <script
-       src="/javascripts/board/div_color_palette.js"
+       src="./javascripts/board/div_color_palette.js"
        type="text/javascript"></script>
 
     <!-- control -->
     <script
-       src="/javascripts/board/div_control_bar.js"
+       src="./javascripts/board/div_control_bar.js"
        type="text/javascript"></script>
 
     <!-- ? -->
     <script
-       src="/javascripts/board/input_history.js"
+       src="./javascripts/board/input_history.js"
        type="text/javascript"></script>
 
     <script
-       src="/javascripts/board/state.js"
+       src="./javascripts/board/state.js"
        type="text/javascript"></script>
 
 
     <!-- scheme -->
     <script
-       src="/javascripts/small_scheme/painter.js"
+       src="./javascripts/small_scheme/painter.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/small_scheme/primitive_functions.js"
+       src="./javascripts/small_scheme/primitive_functions.js"
        type="text/javascript"></script>
 
     <script
-       src="/javascripts/small_scheme/dataset.js"
+       src="./javascripts/small_scheme/dataset.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/small_scheme/tosource.js"
+       src="./javascripts/small_scheme/tosource.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/small_scheme/scanner.js"
+       src="./javascripts/small_scheme/scanner.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/small_scheme/parser.js"
+       src="./javascripts/small_scheme/parser.js"
        type="text/javascript"></script>
     <script
-       src="/javascripts/small_scheme/eval.js"
+       src="./javascripts/small_scheme/eval.js"
        type="text/javascript"></script>
 
     <!-- scheme main -->
     <script
-       src="/javascripts/small_scheme/main.js"
+       src="./javascripts/small_scheme/main.js"
        type="text/javascript"></script>
 
     <!-- main -->
     <script
-       src="/javascripts/board/board_main2.js"
+       src="./javascripts/board/board_main.js"
        type="text/javascript"></script>
 
   </head>
@@ -111,51 +116,72 @@
     </haeder>
 
     <div id="main-contents">
-      <!-- left -->
-      <div id="left-content">
-	<div id="color_palette">
-	</div>
+      <!-- head  -->
+      <div id="tool_bar">
+	ツールバー
       </div>
 
-      <!--center -->
-      <div id="div_canvas">
-	<canvas id="canvas_main"></canvas>
+      <div id="middle-contents">
+	
+	<!-- left -->
+	<div id="left-content">
+	  <div id="color_palette">
+	  </div>
+	</div>
+
+	<!-- center -->
+	<div id="div_canvas">
+	  <canvas id="canvas_main"></canvas>
+	</div>
+
+	<!-- right -->
+	<div id="right-content">
+
+	  <div id="whole-canvas">
+	    <h2>小さいの</h2>
+	    <canvas id="small-canvas"></canvas>
+	  </div>
+	  <div id="div-layer-display">
+	    ここにはレイヤー管理のあれを表示する
+	  </div>
+	  <div id="div_content">
+	    <div id="div_repl_output">
+              <pre class="repl_output"><code class="repl_output_code lisp">console</code></pre>
+	    </div>
+	    <div id="div_repl_input">
+              <input type="text" id="repl_input" size="7"/>
+	    </div>
+	  </div>
+
+	  <div id="div_editor">
+	    <div>
+              ここにコードを書く．
+	    </div>
+	    <textarea id="textarea_editor"></textarea>
+	  </div>
+
+	  <div id="control_bar">
+	    <div id="color_palett_button" class="menu_button">
+	      P
+	    </div>
+	    <div id="console_button" class="menu_button">
+	      C
+	    </div>
+	  </div>
+	</div>
       </div>
-
-      <div id="right-content">
-
-	<div id="div_content">
-	  <div id="div_repl_output">
-            <pre class="repl_output"><code class="repl_output_code lisp">output</code></pre>
-	  </div>
-	  <div id="div_repl_input">
-            <input type="text" id="repl_input" size="7"/>
-	  </div>
-	</div>
-
-	<div id="div_editor">
-	  <div>
-            ここにコードを書く．
-	  </div>
-	  <textarea id="textarea_editor"></textarea>
-	</div>
-	<div id="whole-canvas">
-	  <h2>小さいの</h2>
-	  <canvas id="smarl-canvas"></canvas>
-	</div>
-	<div id="control_bar">
-	  <div id="color_palett_button" class="menu_button">
-	    P
-	  </div>
-	  <div id="console_button" class="menu_button">
-	    C
-	  </div>
-	</div>
+      <!-- bottom  -->
+      <div id="status_bar">
+	ステータスバー
       </div>
+      
     </div>
     <footer>
       <div id="footer-bar">
-	ほげ
+	<p>
+          this site maintained by
+          <a href="https://github.com/yuuhik/">なめくじ</a>
+        </p>
       </div>
     </footer>
 
