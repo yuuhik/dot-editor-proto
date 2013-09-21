@@ -22,3 +22,5 @@ dot-editor-proto
 
 - piet-modeの実装
 - 自作スクリプト言語によるエディタ操作
+
+
