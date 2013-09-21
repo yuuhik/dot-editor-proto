@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>タイトル</title>
+    <meta charset="utf-8" content="text/html" http-equiv="Content-Type">
+    </meta>
+
+    <link
+            href="../../stylesheets/bootstrap.min.css"
+            rel="stylesheet">
+    <link
+            href="../../stylesheets/black-base.css"
+            rel="stylesheet">
+
+    <link
+            href="./full.css"
+            rel="stylesheet">
+    <link
+            href="./board.css"
+            rel="stylesheet">
+
+    <script
+            src="../jquery-1.9.0.js"
+            type="text/javascript"></script>
+
+    <script
+            src="../jquery-ui-1.10.0.custom.min.js"
+            type="text/javascript"></script>
+
+    <script
+            src="./board_init.js"
+            type="text/javascript"></script>
+
+    <script
+            src="./panel.js"
+            type="text/javascript"></script>
+    <script
+            src="./board.js"
+            type="text/javascript"></script>
+    <script
+            src="./editor.js"
+            type="text/javascript"></script>
+    <script
+            src="./div_repl.js"
+            type="text/javascript"></script>
+    <script
+            src="./div_repl_output.js"
+            type="text/javascript"></script>
+    <script
+       src="div_color_palette.js"
+       type="text/javascript"></script>
+    <script
+       src="./div_control_bar.js"
+       type="text/javascript"></script>
+
+
+    <script
+            src="./input_history.js"
+            type="text/javascript"></script>
+
+    <script
+            src="./state.js"
+            type="text/javascript"></script>
+
+    <script
+            src="../small_scheme/painter.js"
+            type="text/javascript"></script>
+    <script
+            src="../small_scheme/primitive_functions.js"
+            type="text/javascript"></script>
+
+    <script
+            src="../small_scheme/dataset.js"
+            type="text/javascript"></script>
+    <script
+            src="../small_scheme/tosource.js"
+            type="text/javascript"></script>
+    <script
+            src="../small_scheme/scanner.js"
+            type="text/javascript"></script>
+    <script
+            src="../small_scheme/parser.js"
+            type="text/javascript"></script>
+
+    <script
+            src="../small_scheme/eval.js"
+            type="text/javascript"></script>
+    <script
+            src="../small_scheme/main.js"
+            type="text/javascript"></script>
+
+
+    <script
+            src="./board_main.js"
+            type="text/javascript"></script>
+</head>
+<body>
+
+<div id="div_content">
+    <div id="div_repl_output">
+        <pre class="repl_output"><code class="repl_output_code lisp">output</code></pre>
+    </div>
+    <div id="div_repl_input">
+        <input type="text" id="repl_input" size="7"/>
+    </div>
+</div>
+
+<div id="div_editor">
+    <div>
+        ここにコードを書く．
+    </div>
+    <textarea id="textarea_editor"></textarea>
+</div>
+
+<div id="color_palette">
+</div>
+
+<div id="div_canvas">
+    <canvas id="canvas_main"></canvas>
+</div>
+
+
+<div id="control_bar">
+  <div id="color_palett_button" class="menu_button">
+    P
+  </div>
+  <div id="editor_button" class="menu_button">
+    E
+  </div>
+  <div id="console_button" class="menu_button">
+    C
+  </div>
+</div>
+
+</body>
+</html>

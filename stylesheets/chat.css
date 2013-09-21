@@ -1,0 +1,22 @@
+#div_chat {
+    position:absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 25%;
+    width: 33%;
+    height: 30%;
+    background: rgba(10, 10, 10, 0.5);
+}
+
+#chat-area {
+    position:relative;
+    margin-bottom: 15px;
+}
+.meta {
+    color: #999999;
+    font-size: 0.9em;
+}
+.chat-time {
+    position:relative;
+    margin-left: 15px;
+}

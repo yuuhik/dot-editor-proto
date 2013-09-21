@@ -1,0 +1,9 @@
+
+#div_content {
+    position:absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 65%;
+    width: 33%;
+    background: rgba(150, 150, 170, 0.3); /* RGBを10進数(0～255)で指定、不透明度を0～1.0で指定 */
+}
